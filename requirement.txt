@@ -1,9 +1,5 @@
-# Core dependencies
 Django>=5.0,<6.0
-Pillow>=10.0.0
-
-# Optional — for production deployment
-gunicorn>=21.2.0          # WSGI HTTP server for Linux/Render
-whitenoise>=6.6.0         # To serve static files
-dj-database-url>=2.1.0    # For handling database URLs (Render/Heroku)
-psycopg2-binary>=2.9.9    # PostgreSQL adapter (safe for deployment)
+gunicorn
+dj-database-url
+psycopg2-binary
+whitenoise
