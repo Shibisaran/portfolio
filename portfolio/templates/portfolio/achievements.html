@@ -1,0 +1,21 @@
+{% extends 'portfolio/base.html' %}
+{% block title %}Achievements{% endblock %}
+{% block content %}
+<div class="container py-5">
+  <h2 class="mb-4">Achievements</h2>
+  <ul class="list-group shadow-sm">
+    {% for a in achievements %}
+      <li class="list-group-item">
+        <h6 class="mb-1">
+          <span class="badge bg-light text-dark me-2"><i class="fa-solid fa-trophy me-1"></i>Achievement</span>
+          {{ a.title }}
+        </h6>
+        <p class="mb-0 text-muted">{{ a.description }}</p>
+      </li>
+    {% empty %}
+      <li class="list-group-item">No achievements added yet.</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
+

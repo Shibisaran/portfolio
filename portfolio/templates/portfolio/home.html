@@ -1,0 +1,82 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<!-- Floating Certification Images in Left Corner -->
+<div class="floating-certifications">
+  {% for cert in certifications|slice:":4" %}
+    {% if cert.image %}
+    <div class="floating-cert-item floating-cert-{{ forloop.counter }}">
+      <img src="{{ cert.image.url }}" alt="{{ cert.name }}" class="floating-cert-img" title="{{ cert.name }}">
+    </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<section class="hero-section d-flex align-items-center">
+  <div class="container text-center">
+    <img src="{% static 'portfolio/images/profile.png' %}" alt="Profile" class="profile-pic mb-4">
+    <h1 class="display-5 fw-bold">Hi, I'm <span class="gradient-text">Shibisaran M</span></h1>
+    <p class="lead">Python Developer | Django Enthusiast | Turning Ideas into Code 💻☁️</p>
+    <div class="mt-4">
+      <a href="{% static 'portfolio/images/resume.pdf' %}" class="btn btn-primary btn-lg me-2" download>Download Resume</a>
+      <a href="{% url 'projects' %}" class="btn btn-outline-light btn-lg">View Projects</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="py-5 bg-light section-fade in-view">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2 class="mb-4">About Me</h2>
+        <p>
+          I'm Shibisaran, a backend/cloud-focused developer passionate about building robust APIs,
+          scalable services, and clean architectures. I enjoy solving real-world problems with
+          Python and Django, and I’m continually exploring cloud technologies and DevOps
+          best practices.
+        </p>
+        <p>
+          Outside of coding, I love learning, experimenting with new tools, and contributing to
+          projects that make a difference. My goal is to grow into a seasoned backend/cloud
+          engineer while maintaining a strong foundation in software craftsmanship.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 explore-links">
+  <div class="container">
+    <h2 class="mb-4 text-center">Explore My Portfolio</h2>
+    <div class="row g-3 g-md-4 justify-content-center text-center">
+      <div class="col-6 col-md-4 col-lg-2">
+        <a href="{% url 'skills' %}" class="btn w-100 btn-outline-primary py-3">
+          <i class="fa-solid fa-code me-1"></i> Skills
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <a href="{% url 'projects' %}" class="btn w-100 btn-outline-primary py-3">
+          <i class="fa-solid fa-diagram-project me-1"></i> Projects
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <a href="{% url 'certifications' %}" class="btn w-100 btn-outline-primary py-3">
+          <i class="fa-solid fa-award me-1"></i> Certifications
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <a href="{% url 'achievements' %}" class="btn w-100 btn-outline-primary py-3">
+          <i class="fa-solid fa-trophy me-1"></i> Achievements
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <a href="{% url 'contact' %}" class="btn w-100 btn-outline-primary py-3">
+          <i class="fa-solid fa-envelope me-1"></i> Contact
+        </a>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+

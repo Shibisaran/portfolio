@@ -1,0 +1,30 @@
+{% extends 'portfolio/base.html' %}
+{% block title %}Certifications{% endblock %}
+{% block content %}
+<div class="container py-5">
+  <h2 class="mb-4">Certifications</h2>
+  <div class="row g-4">
+    {% for cert in certifications %}
+    <div class="col-sm-6 col-lg-4">
+      <div class="card h-100 shadow-sm text-center">
+        {% if cert.image %}
+        <img src="{{ cert.image.url }}" class="card-img-top p-3 cert-image" alt="{{ cert.name }}">
+        {% endif %}
+        <div class="card-body">
+          <h5 class="card-title">
+            <span class="badge bg-light text-dark me-2"><i class="fa-solid fa-award me-1"></i>Certified</span>
+            {{ cert.name }}
+          </h5>
+          <p class="card-text text-muted">
+            <span class="badge bg-secondary-subtle text-dark"><i class="fa-solid fa-building me-1"></i>{{ cert.issuing_organization }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    {% empty %}
+    <div class="col-12"><p>No certifications added yet.</p></div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+

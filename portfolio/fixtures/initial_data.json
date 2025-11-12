@@ -1,0 +1,28 @@
+[
+  {"model": "portfolio.skill", "pk": 1, "fields": {"name": "Python", "level": 90}},
+  {"model": "portfolio.skill", "pk": 2, "fields": {"name": "Django", "level": 85}},
+  {"model": "portfolio.skill", "pk": 3, "fields": {"name": "SQL", "level": 80}},
+  {"model": "portfolio.skill", "pk": 4, "fields": {"name": "AWS", "level": 70}},
+  {"model": "portfolio.skill", "pk": 5, "fields": {"name": "Git", "level": 85}},
+  {"model": "portfolio.skill", "pk": 6, "fields": {"name": "Linux", "level": 75}},
+  {"model": "portfolio.skill", "pk": 7, "fields": {"name": "HTML", "level": 80}},
+  {"model": "portfolio.skill", "pk": 8, "fields": {"name": "CSS", "level": 75}},
+  {"model": "portfolio.skill", "pk": 9, "fields": {"name": "JavaScript", "level": 70}},
+
+  {"model": "portfolio.project", "pk": 1, "fields": {"title": "Task Manager", "description": "A task management app with user auth and CRUD operations using Django.", "github_link": "https://github.com/youruser/task-manager", "image": null}},
+  {"model": "portfolio.project", "pk": 2, "fields": {"title": "Thanglish Translator", "description": "Translates Tamil-English (Tanglish) text using NLP preprocessing.", "github_link": "https://github.com/youruser/thanglish-translator", "image": null}},
+  {"model": "portfolio.project", "pk": 3, "fields": {"title": "Cloudburst Prediction", "description": "Predictive analysis using weather datasets and ML integration.", "github_link": "https://github.com/youruser/cloudburst-prediction", "image": null}},
+  {"model": "portfolio.project", "pk": 4, "fields": {"title": "Server Hosting Project", "description": "Self-hosted services on Linux with reverse proxy and SSL.", "github_link": "https://github.com/youruser/server-hosting", "image": null}},
+
+  {"model": "portfolio.certification", "pk": 1, "fields": {"name": "OCI", "issuing_organization": "Oracle", "image": null}},
+  {"model": "portfolio.certification", "pk": 2, "fields": {"name": "Azure AI-900", "issuing_organization": "Microsoft", "image": null}},
+  {"model": "portfolio.certification", "pk": 3, "fields": {"name": "Red Hat RH124", "issuing_organization": "Red Hat", "image": null}},
+  {"model": "portfolio.certification", "pk": 4, "fields": {"name": "AWS Cloud Migration", "issuing_organization": "AWS", "image": null}},
+
+  {"model": "portfolio.achievement", "pk": 1, "fields": {"title": "CodeChef 500+", "description": "Solved over 500 problems on CodeChef."}},
+  {"model": "portfolio.achievement", "pk": 2, "fields": {"title": "Top performer in training", "description": "Recognized for outstanding performance during training."}},
+  {"model": "portfolio.achievement", "pk": 3, "fields": {"title": "Completed Oracle Cloud course", "description": "Successfully completed Oracle Cloud infrastructure course."}}
+]
+
+
+

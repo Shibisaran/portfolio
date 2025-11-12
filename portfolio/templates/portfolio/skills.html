@@ -1,0 +1,29 @@
+{% extends 'portfolio/base.html' %}
+{% block title %}Skills{% endblock %}
+{% block content %}
+<div class="container py-5">
+  <h2 class="mb-4">Skills</h2>
+  <div class="row">
+    {% for skill in skills %}
+    <div class="col-md-6 mb-3">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <strong>{{ skill.name }}</strong>
+            <span>{{ skill.level }}%</span>
+          </div>
+          <div class="progress mt-2">
+            <div class="progress-bar" role="progressbar" style="width: {{ skill.level }}%;" aria-valuenow="{{ skill.level }}" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% empty %}
+    <div class="col-12"><p>No skills added yet.</p></div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+
+
+
